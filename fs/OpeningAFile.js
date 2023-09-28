@@ -1,10 +1,11 @@
-
+const fs = require("fs"); // accessing file sysyem module.
 
 //Read = Opening a file + Reading a file.
 
-//Opening a file
 
-const fs = require("fs");
+
+
+//Opening a file
 
 const buf = new Buffer(1024);
 
@@ -37,6 +38,8 @@ fs.open('input.txt', "r+", function (err,fd) {
             console.log("data is:",  buf.slice(0, bytes).toString());
 
         }
+
+        
 //Closing the file
 
         fs.close(fd, function(err){
